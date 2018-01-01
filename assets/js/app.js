@@ -5,8 +5,8 @@ $(document).ready(function(){
   /*
   *Función que ejecuta el preloader
   */
-  $('#status').delay(3000).fadeOut('slow');
-  $('#preloader').delay(3000).fadeOut();
+  $('#status').delay(1000).fadeOut('slow');
+  $('#preloader').delay(1000).fadeOut();
   $('.second-screen').hide();
   $('#sign-up').hide();
   
@@ -15,7 +15,7 @@ $(document).ready(function(){
   */
   setTimeout(function(){
   $('.second-screen').show();
-  }, 3000);
+  }, 1000);
 
  /*
   *Evento de click que muestra el botón y esconde mi segunda pantalla

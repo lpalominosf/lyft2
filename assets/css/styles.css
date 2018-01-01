@@ -45,3 +45,41 @@
   color: #fff;
   margin-top: 450px;
 }
+
+/*Banderitas*/
+.flags{
+  width: 30px;
+  height: 30px;
+}
+
+/*Titulo de la pantalla Sign Up*/
+h1{
+  font-size: 20px;
+}
+
+/*Dropdown de las banderas*/
+.dropdown-menu{
+  min-width: 60px;
+  text-align: center;
+}
+
+/*Botón next*/
+.btn-next{
+  color: #000;
+  background-color: #ebebe0;
+  width: 100%;
+  margin-top: 4%;
+}
+
+/*Flechita*/
+.glyphicon-chevron-left{
+  color:  #d6d6c2;
+  font-size: 20px;
+}
+
+/*Apliqué este estilo, ya que las banderas me quedaban
+debajo de todo*/
+.col-xs-3 {
+  width: 25%;
+  margin-top: -110%;
+}
