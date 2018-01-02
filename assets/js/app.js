@@ -66,7 +66,7 @@ $(document).ready(function(){
 /*
 *Función que nos da el código random
 */
-$("#sign-up-dis").click(function(){
+$(".sign-up-dis").click(function(){
     var code = "";
     var str = "123456789";
     for (var i = 0; i < 3; i++) {
@@ -77,7 +77,9 @@ $("#sign-up-dis").click(function(){
   $("#verified").show();
 });
 
-
+/*
+*Al clickear el botṕn next, pasa a la siguiente pantalla
+*/
 $('.sign-up-dis').click(function(){
   $('#verify').show();
   $('#sign-up').hide();
