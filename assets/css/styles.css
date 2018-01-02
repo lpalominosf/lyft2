@@ -64,7 +64,7 @@ h1{
 }
 
 /*Botón next*/
-.btn-next, .resend-btn{
+.btn-next, .resend-btn, .btn-next-final{
   color: #000;
   background-color: #ebebe0;
   width: 100%;
@@ -84,10 +84,32 @@ debajo de todo*/
   margin-top: -110%;
 }
 
+
 .verify-phone{
   font-size: 17px;
 }
 
 .lab-input{
   width: 90%;
+}
+
+.btn-next-verified{
+  width: 100%;
+  color: #000;
+  background-color: #ebebe0;
+  margin-top: 5%;
+}
+
+/*Input de usuario*/
+.user-input{
+  width: 72%;
+  margin-left: 14%;
+}
+
+input[type=checkbox]{
+  margin-right: 90%;
+}
+
+.agree{
+  margin-top: -8%;
 }

@@ -10,6 +10,7 @@ $(document).ready(function(){
   $('.second-screen').hide();
   $('#sign-up').hide();
   $('#verify').hide();
+  $('#user-form').hide();
   
   /*
   *Tiempo en que demora en aparecer la segunda pantalla
@@ -78,7 +79,7 @@ $(".sign-up-dis").click(function(){
 });
 
 /*
-*Al clickear el botṕn next, pasa a la siguiente pantalla
+*Al clickear el botón next, pasa a la siguiente pantalla
 */
 $('.sign-up-dis').click(function(){
   $('#verify').show();
@@ -93,9 +94,56 @@ $('.flechita2').click(function(){
     $('#sign-up').show();
   });
 
+/*
+*Función para re-generar el código
+*/
+$('.resend-btn').click(function(){
+  newCode ="";
+  var str = "123456789";
+  for (var i=0; i < 3; i++){
+    newCode += str.charAt(Math.floor(Math.random() * str.length));
+  }
+  alert("Tu código: LAB-" + newCode)
+});
+
+
+/*
+*Función para habilitar y deshabilitar el botón next
+*Y así dar paso al formulario del usuario
+*/
+$(".lab-input").keyup(function () {
+  if($(this).val().length == 3) {
+    $(".btn-next-verified").removeAttr("disabled");
+    $('.btn-next-verified').removeClass('disabled');
+
+/*
+*Botón se deshabilita si no son 3 caracteres
+*/
+}else if($(this).val().length < 3){
+  $(".btn-next-verified").attr("disabled", "disabled");
+}
+});
+
+$('.btn-next-verified').click(function(){
+  $('#verify').hide();
+  $('#user-form').show();
+});
+
+/*
+*función para volver a la pantalla de verificación
+*/
+$('.flechita3').click(function(){
+  $('#verify').show();
+  $('#user-form').hide();
+});
+
+
+
 }); //Fin de la función principal.
 
 
 
 
 
+/*glyphicon glyphicon-user 
+glyphicon glyphicon-envelope*/
