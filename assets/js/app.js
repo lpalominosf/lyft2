@@ -11,6 +11,7 @@ $(document).ready(function(){
   $('#sign-up').hide();
   $('#verify').hide();
   $('#user-form').hide();
+  $('#final-section').hide();
   
   /*
   *Tiempo en que demora en aparecer la segunda pantalla
@@ -137,6 +138,23 @@ $('.flechita3').click(function(){
   $('#user-form').hide();
 });
 
+/*
+*Vuelve a la página del formulario
+*/
+$('.flechita4').click(function(){
+  $('#user-form').show();
+  $('#final-section').hide();
+});
+
+$('.ticked').click(function(){
+  $('.btn-next-final').removeAttr("disabled");
+  $('.btn-next-final').removeClass('disabled');
+});
+
+$('.btn-next-final').click(function(){
+  $('#user-form').hide();
+  $('#final-section').show();
+});
 
 
 }); //Fin de la función principal.
